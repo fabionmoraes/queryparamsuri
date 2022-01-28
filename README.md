@@ -40,6 +40,8 @@ const App = () => {
         page: 1, // adiciona a paginação na URI por default é 1
     });
 
+    //query = { status: '', type: '' } sendo retorno em object
+
     useEffect(() => {
         // ... info
     }, [searchURI]); // eslint-disable-line
@@ -49,12 +51,25 @@ const App = () => {
             name: 'page',
             value,
         });
-        //params = ?page=1&limit=15
+        //params = ?page=1
         // add history.push(params)
     };
+
+    const handleLimit = (event: SelectChangeEvent) => {
+        const params = queryURI({
+            name: 'limit',
+            value: event.target.value,
+        });
+        //params = ?page=1&limit=15
+    }
 
     return(
         //...info
     )
 }
 ```
+
+## Exemplo de uso
+
+Utilizando a library QueryParamsUri
+Open [use-queryparamsuri-example](https://github.com/fabionmoraes/use-queryparamsuri-example)
