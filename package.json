@@ -1,12 +1,21 @@
 {
   "name": "queryparamsuri",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Easy parameter search",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/fabionmoraes/queryparamsuri"
+  },
+  "files": [
+    "dist"
+  ],
+  "jest": {
+    "verbose": true,
+    "coveragePathIgnorePatterns": [
+      "/src/index.ts"
+    ]
   },
   "scripts": {
     "clean": "rm -rf ./dist",
@@ -26,7 +35,7 @@
   ],
   "author": "Fabio Moraes",
   "license": "ISC",
-  "preferGlobal": "true",
+  "preferGlobal": true,
   "devDependencies": {
     "@types/jest": "^27.4.0",
     "auto": "^10.32.6",
