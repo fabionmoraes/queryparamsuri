@@ -74,3 +74,13 @@ export function queryURI(params: IQueryURI) {
 
   return `?${res.join("&")}`;
 }
+
+export const queryObjectURI = (object: any) => {
+  let str = "";
+
+  Object.keys(object).forEach((key) => {
+    str += `${key}=${object[key]}&`;
+  });
+
+  return `?${str}`;
+};

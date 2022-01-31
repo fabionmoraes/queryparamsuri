@@ -63,6 +63,18 @@ const App = () => {
         //params = ?page=1&limit=15
     }
 
+    const handleSearchObject = (values: any) => {
+        // example values {
+        //     status: 'ex',
+        //     type: 'ex2
+        // }
+
+        const params = queryObjectURI(values)
+
+        // params = ?status=ex&type=ex2
+        // add history.push(params)
+    }
+
     return(
         //...info
     )
